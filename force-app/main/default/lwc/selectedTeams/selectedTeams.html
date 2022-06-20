@@ -1,0 +1,45 @@
+<template>
+
+<lightning-card  title="Select Team">
+<lightning-button label="Reset" slot="actions" onclick={resetAll}></lightning-button>
+<p class="slds-p-horizontal_small">
+    
+    <lightning-button-menu alternative-text="Show menu" data-id="bmOne" onselect={teamOneSelected}>
+        
+            <template for:each={teams} for:item="selectedTeam">
+                <lightning-menu-item
+                    
+                    label={selectedTeam.Team_Code_c__c}
+                    value={selectedTeam.Team_Code_c__c}
+                    key={selectedTeam.Name}
+                >
+                </lightning-menu-item>
+            </template>
+    
+    </lightning-button-menu>
+    Team One:{sTeam1}
+    <br>
+    <br>
+    
+    <lightning-button-menu alternative-text="Show menu" data-id="bmTwo" onselect={teamTwoSelected}>
+        
+        <template for:each={teams} for:item="selectedTeam">
+            <lightning-menu-item 
+                
+                label={selectedTeam.Team_Code_c__c}
+                value={selectedTeam.Team_Code_c__c}
+                key={selectedTeam.Name}
+            >
+            </lightning-menu-item>
+        </template>
+    
+    </lightning-button-menu>
+    Team Two: {sTeam2}
+
+</p>
+
+<p slot="footer">&copy; Owais Amin Ahanger</p>
+</lightning-card>
+
+
+</template>

@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+.slds-grid.justify-center {
+  justify-content: center;
+}
+.card {
+  display: grid;
+  grid-template-columns: 130px;
+  grid-template-rows: 80px 80px 20px;
+  grid-template-areas: "image" "text" "stats";
+
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  font-family: roboto;
+  text-align: center;
+
+  
+  margin: 5px 10px 5px 30px;
+}
+.card-image {
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  max-height: 70px;
+  width: 130px;
+  min-height: 70px;
+}
+
+.card-text {
+  grid-area: text;
+}
+
+
+.card-text h2 {
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
